@@ -62,8 +62,6 @@ $(document).ready(function() {
 
     loadQuestion(qOn);
 
-
-
     function loadQuestion(e){
         //debugger;
         currentQuestion.append(codeQuestions[e].question);
@@ -76,10 +74,15 @@ $(document).ready(function() {
     }
 
     function loadQuizEnd(){
-        debugger;
-        var submitInput = `<p>Your final score is: ${currentScore}<br/>Please submit your name below</p><div class="input-group mb-3"><input type="text" class="form-control" placeholder="Your Full Name" aria-label="Your Full Name" aria-describedby="button-addon2"><div class="input-group-append"><button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button></div></div>`
+        //debugger;
+        var submitInput = `<p>Your final score is: ${currentScore}<br/>Please submit your name below</p><div class="input-group mb-3"><input type="text" class="form-control" placeholder="Your Full Name" aria-label="Your Full Name" aria-describedby="button-addon2"><div class="input-group-append"><a href= class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</a></div></div>`
         $('.card-text').append(submitInput);
     }
+
+    // function submitHighScore(){
+    //     localStorage.setItem("email", email);
+    //     localStorage.setItem("password", password);
+    // }
 
     $("body").delegate('.quizOption',"click",function(){
 
