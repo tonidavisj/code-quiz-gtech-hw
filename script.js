@@ -75,7 +75,7 @@ $(document).ready(function() {
 
     function loadQuizEnd(){
         //debugger;
-        var submitInput = `<p>Your final score is: ${currentScore}<br/>Please submit your name below</p><div class="input-group mb-3"><input type="text" class="form-control" placeholder="Your Full Name" aria-label="Your Full Name" aria-describedby="button-addon2"><div class="input-group-append"><a href= class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</a></div></div>`
+        var submitInput = `<p>Your final score is: ${currentScore}<br/>Please submit your name below</p><div class="input-group mb-3"><input type="text" class="form-control" placeholder="Your Full Name" aria-label="Your Full Name" aria-describedby="button-addon2"><div class="input-group-append"><a class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</a></div></div>`
         $('.card-text').append(submitInput);
     }
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
         questionResults.empty();
 
         qOn++;
-       
+    
         if(qOn < codeQuestions.length){
             loadQuestion(qOn);
         }else{
